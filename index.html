@@ -1,0 +1,52 @@
+---
+layout: default
+---
+{% assign f = site.data.fournee %}
+<header class="hero">
+  <img src="{{ '/assets/img/four.jpg' | relative_url }}" alt="Le four de Bottens">
+  <div class="hero-overlay">
+    <p class="hero-kicker">Les Boulangers Sympa</p>
+    <h1>Bienvenue au Four de Bottens</h1>
+  </div>
+</header>
+
+<main class="home">
+  {% unless f.afficher == "non" or f.afficher == false %}
+  <section class="fournee">
+    <span class="label">Prochaine fournée</span>
+    <h2>{{ f.titre }}</h2>
+    <span class="fournee-date">{{ f.date }}</span>
+  </section>
+
+  <section class="cartes">
+    {% for c in f.cartes %}
+    <div class="carte">
+      <span class="carte-libelle">{{ c.libelle }}</span>
+      <span class="carte-valeur{% if c.rouge == "oui" or c.rouge == true %} rouge{% endif %}">{{ c.valeur | strip | escape | newline_to_br }}</span>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section class="commande">
+    <a class="bouton" href="{{ '/commandes/' | relative_url }}">Je commande</a>
+    <span class="commande-autre">ou par téléphone au <a href="tel:{{ site.telephone | remove: ' ' }}">{{ site.telephone }}</a> · par SMS au <a href="sms:{{ site.sms | remove: ' ' }}">{{ site.sms }}</a></span>
+  </section>
+
+  <section class="texte">
+    {{ f.texte | markdownify }}
+  </section>
+  {% endunless %}
+  {% if f.afficher == "non" or f.afficher == false %}
+  <section class="fournee">
+    <span class="label">Prochaine fournée</span>
+    <h2>Pas de fournée prévue pour le moment</h2>
+    <span class="fournee-date">Revenez bientôt !</span>
+  </section>
+  {% endif %}
+
+  <section class="photos">
+    <img src="{{ '/assets/img/pizzas.jpg' | relative_url }}" alt="Pizzas prêtes pour le four" loading="lazy">
+    <img src="{{ '/assets/img/pains.jpg' | relative_url }}" alt="Pains sur les étagères" loading="lazy">
+    <img src="{{ '/assets/img/tresses.jpg' | relative_url }}" alt="Tresses et petits pains" loading="lazy">
+  </section>
+</main>
