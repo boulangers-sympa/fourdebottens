@@ -1,0 +1,14 @@
+---
+layout: page
+title: Galerie
+permalink: /galerie/
+banniere: four-chemin.jpg
+---
+{% assign photos = "four.jpg|Le four au printemps,four-ciel.jpg|Le four sous le ciel de Bottens,four-arriere.jpg|L'arrière du four et la réserve de bois,four-feu.jpg|Le feu dans le four,pizzas.jpg|Pizzas prêtes pour le four,pains.jpg|Pains sur les étagères,tresses.jpg|Tresses et petits pains,equipe.jpg|Les Boulangers Sympa" | split: "," %}
+<div class="galerie">
+  {% for p in photos %}{% assign x = p | split: "|" %}
+  <a href="{{ x[0] | prepend: '/assets/img/' | relative_url }}">
+    <img src="{{ x[0] | prepend: '/assets/img/' | relative_url }}" alt="{{ x[1] }}" loading="lazy">
+  </a>
+  {% endfor %}
+</div>

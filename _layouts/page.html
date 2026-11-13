@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% if page.banniere %}
+<header class="hero hero-page">
+  <img src="{{ page.banniere | prepend: '/assets/img/' | relative_url }}" alt="">
+  <div class="hero-overlay">
+    <h1>{{ page.title }}</h1>
+  </div>
+</header>
+{% endif %}
+<main class="page">
+  {% unless page.banniere %}<h1>{{ page.title }}</h1>{% endunless %}
+  {{ content }}
+</main>
