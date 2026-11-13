@@ -12,6 +12,25 @@ Site statique (Jekyll), publié par GitHub Pages à chaque modification
 
 Le site se met à jour 1 à 2 minutes plus tard.
 
+### Modifier le texte sous le bouton « Je commande »
+
+C'est la partie `texte:` à la fin de `_data/fournee.yml` :
+
+```yaml
+texte: |
+  Premier paragraphe.
+
+  Deuxième paragraphe.
+```
+
+- Garder le `|` après `texte:`.
+- Commencer chaque ligne par **2 espaces**.
+- Laisser une **ligne vide** entre deux paragraphes.
+- Pour mettre un mot en gras : `**pizza du four**`.
+
+Si le site ne se met pas à jour, ouvrir l'onglet **Actions** : une croix
+rouge ❌ signale en général un espace manquant au début d'une ligne.
+
 ## Aperçu local
 
 ```
