@@ -1,0 +1,63 @@
+# Publie le site à chaque modification de la branche main.
+# 1. Prépare les nouvelles photos de assets/img/photos/ (sens, taille, sans GPS)
+# 2. Construit le site avec Jekyll
+# 3. Le met en ligne sur GitHub Pages
+name: Publier le site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  construire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Préparer les photos
+        run: |
+          pip install --quiet pillow pillow-heif
+          python scripts/preparer_photos.py
+
+      - name: Enregistrer les photos préparées
+        run: |
+          if [ -n "$(git status --porcelain assets/img/photos)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A assets/img/photos
+            git commit -m "Photos : préparation automatique (taille, sans GPS)"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - uses: actions/upload-pages-artifact@v3
+
+  publier:
+    needs: construire
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - id: deploiement
+        uses: actions/deploy-pages@v4

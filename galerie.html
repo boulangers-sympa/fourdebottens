@@ -4,11 +4,11 @@ title: Galerie
 permalink: /galerie/
 banniere: four-chemin.jpg
 ---
-{% assign photos = "four.jpg|Le four au printemps,four-ciel.jpg|Le four sous le ciel de Bottens,four-arriere.jpg|L'arrière du four et la réserve de bois,four-feu.jpg|Le feu dans le four,pizzas.jpg|Pizzas prêtes pour le four,pains.jpg|Pains sur les étagères,tresses.jpg|Tresses et petits pains,equipe.jpg|Les Boulangers Sympa" | split: "," %}
+{% assign photos = site.static_files | where_exp: "f", "f.path contains '/assets/img/photos/'" | where: "extname", ".jpg" | sort: "name" | reverse %}
 <div class="galerie">
-  {% for p in photos %}{% assign x = p | split: "|" %}
-  <a href="{{ x[0] | prepend: '/assets/img/' | relative_url }}">
-    <img src="{{ x[0] | prepend: '/assets/img/' | relative_url }}" alt="{{ x[1] }}" loading="lazy">
+  {% for f in photos %}{% assign legende = site.data.legendes[f.name] %}
+  <a href="{{ f.path | relative_url }}">
+    <img src="{{ f.path | relative_url }}" alt="{{ legende | default: 'Photo du four de Bottens' | escape }}"{% if legende %} data-legende="{{ legende | escape }}"{% endif %} loading="lazy">
   </a>
   {% endfor %}
 </div>
@@ -29,7 +29,7 @@ banniere: four-chemin.jpg
   function montrer(n) {
     i = (n + liens.length) % liens.length;
     var t = liens[i].querySelector('img');
-    img.src = liens[i].href; img.alt = t.alt; cap.textContent = t.alt;
+    img.src = liens[i].href; img.alt = t.alt; cap.textContent = t.dataset.legende || '';
   }
   liens.forEach(function (a, n) {
     a.addEventListener('click', function (e) { e.preventDefault(); montrer(n); d.showModal(); });
