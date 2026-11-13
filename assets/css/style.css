@@ -148,8 +148,8 @@ h1, h2, h3, .carte-valeur, .nav-brand {
 .page h3 { font-size: 22px; margin: 32px 0 8px; }
 .page blockquote { margin: 16px 0; padding: 4px 0 4px 20px; border-left: 3px solid var(--accent); color: var(--muted); font-style: italic; }
 .page figure { margin: 0 0 32px; }
-.page figure img { width: auto; max-width: 100%; height: auto; border-radius: 12px; display: block; }
-.page figcaption { font-size: 15px; color: var(--muted); margin-top: 8px; }
+.page figure img { width: auto; max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto; }
+.page figcaption { font-size: 15px; color: var(--muted); margin-top: 8px; text-align: center; }
 .page li { margin-bottom: 6px; }
 
 /* Galerie */
