@@ -12,3 +12,41 @@ banniere: four-chemin.jpg
   </a>
   {% endfor %}
 </div>
+
+<dialog class="visionneuse" aria-label="Photo">
+  <button class="fermer" aria-label="Fermer">×</button>
+  <button class="prec" aria-label="Photo précédente">‹</button>
+  <button class="suiv" aria-label="Photo suivante">›</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+</dialog>
+
+<script>
+(function () {
+  var liens = Array.prototype.slice.call(document.querySelectorAll('.galerie a'));
+  var d = document.querySelector('.visionneuse');
+  if (!d || !d.showModal) return;
+  var img = d.querySelector('img'), cap = d.querySelector('figcaption'), i = 0, x0 = null;
+  function montrer(n) {
+    i = (n + liens.length) % liens.length;
+    var t = liens[i].querySelector('img');
+    img.src = liens[i].href; img.alt = t.alt; cap.textContent = t.alt;
+  }
+  liens.forEach(function (a, n) {
+    a.addEventListener('click', function (e) { e.preventDefault(); montrer(n); d.showModal(); });
+  });
+  d.querySelector('.fermer').onclick = function () { d.close(); };
+  d.querySelector('.prec').onclick = function () { montrer(i - 1); };
+  d.querySelector('.suiv').onclick = function () { montrer(i + 1); };
+  d.addEventListener('click', function (e) { if (e.target === d || e.target.tagName === 'FIGURE') d.close(); });
+  d.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') montrer(i - 1);
+    if (e.key === 'ArrowRight') montrer(i + 1);
+  });
+  d.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  d.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 50) montrer(dx < 0 ? i + 1 : i - 1);
+  });
+})();
+</script>

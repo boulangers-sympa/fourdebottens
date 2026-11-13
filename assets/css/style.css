@@ -155,11 +155,33 @@ h1, h2, h3, .carte-valeur, .nav-brand {
 /* Galerie */
 .page .galerie {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
 }
-.galerie img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; display: block; }
+@media (min-width: 640px) { .page .galerie { grid-template-columns: repeat(3, 1fr); gap: 12px; } }
+@media (min-width: 960px) { .page .galerie { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+.galerie a { display: block; }
+.galerie img { width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; border-radius: 8px; display: block; }
 .page:has(.galerie) { max-width: 1040px; }
+
+/* Visionneuse plein écran */
+.visionneuse {
+  border: 0; padding: 0; margin: 0;
+  width: 100vw; height: 100dvh; max-width: none; max-height: none;
+  background: rgba(20, 18, 16, 0.95);
+}
+.visionneuse::backdrop { background: rgba(20, 18, 16, 0.95); }
+.visionneuse figure { margin: 0; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 56px 12px 24px; }
+.visionneuse img { max-width: 100%; max-height: calc(100dvh - 120px); object-fit: contain; border-radius: 4px; }
+.visionneuse figcaption { color: #F3F1EC; font-size: 15px; margin-top: 12px; text-align: center; }
+.visionneuse button {
+  position: absolute; background: none; border: 0; color: #FFFFFF;
+  font-size: 32px; line-height: 1; width: 48px; height: 48px; cursor: pointer;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+.visionneuse .fermer { top: 8px; right: 8px; }
+.visionneuse .prec { left: 4px; top: 50%; transform: translateY(-50%); }
+.visionneuse .suiv { right: 4px; top: 50%; transform: translateY(-50%); }
 
 /* Contact */
 .carte-texte { font-size: 20px; line-height: 1.5; }
