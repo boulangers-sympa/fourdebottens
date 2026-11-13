@@ -2,9 +2,8 @@ title: Les Boulangers Sympa
 description: Le four de la cure à Bottens, avec les Boulangers Sympa.
 lang: fr
 
-# Adresse temporaire: blog.jillmetcalfe.com/fourdebottens/
-# À vider (baseurl: "") le jour où le domaine fourdebottens.ch pointe ici.
-baseurl: /fourdebottens
+url: https://www.fourdebottens.ch
+baseurl: ""
 
 # Contact pour les commandes (affiché sous le bouton « Je commande »)
 telephone: 021 881 21 87
