@@ -2,4 +2,4 @@
 
 ## Handoff
 
-- 2026-11-14 18:55 — [HANDOFF.md](HANDOFF.md): fournée workflow, step 4 done; continue at step 5 (🔥 3 Orders: total check + row writer).
+- 2026-11-14 19:25 — [HANDOFF.md](HANDOFF.md): fournée workflow, steps 4–5 done; continue at step 6 (🔥 4 Daily summary).
