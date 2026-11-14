@@ -14,7 +14,7 @@ banniere: eglise.jpg
   <div class="carte">
     <span class="carte-libelle">Contact</span>
     <span class="carte-texte">Michel Allaz<br><a href="tel:0796683619">079 668 36 19</a></span>
-    <a href="mailto:m.allaz@bluewin.ch">Envoyer un email</a>
+    <a href="mailto:fourdebottens@gmail.com">Envoyer un email</a>
   </div>
 </div>
 
