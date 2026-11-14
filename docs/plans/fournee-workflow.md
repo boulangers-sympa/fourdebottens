@@ -180,6 +180,12 @@ Each step ends in something checkable. All steps run now, in order, on the Tél�
   - Tested by replaying this afternoon's test order with the TEST fournée temporarily Current and Michel's BCC temporarily removed (both restored): row landed correctly (St-Nicolas 4, Total 16); no total alert. Two earlier replays, before the fixes, BCC'd Michel.
   - **Still to test:** a forced price mismatch alert (don't change a product price: the TEST fournée shares product pages with the Téléthon) and moving two columns in Michel's Sheet. Do both in the step 7 test order.
   - Tally has no phone question; Téléphone is for Michel's phone orders.
+- 14 Nov 2026: step 6 done. Make scenario **🔥 4 Daily summary to Michel** (8578340), daily 07:00, **inactive** until step 7. Built as specced, with these details:
+  - Router: route 1 runs while today ≤ Collection date and `Orders sheet` is set: reads row 1 (headers) and rows A2:Z1000 of `Sheet1`, skips empty rows, and turns each cell into a number under its header (the fixed columns Date…Remarques count as 0). Products and their order come from `Email product list`, like 🔥 2 and 🔥 3. Source « Tally » (any case) = par le site; anything else = par téléphone.
+  - Route 2 sends the GitHub `fournee` dispatch only on the day after the Collection date (same HTTP connection as 🔥 2). **Not tested** (it needs that date).
+  - Email recipient is **fourdebottens@gmail.com** for now: a privacy plugin stops Claude from writing Jill's address into Make. At step 7 Jill sets To = Michel and adds herself as BCC in the Make UI.
+  - Tested with the TEST fournée temporarily Current: TEST Sheet with the Tally row (St-Nicolas 4) and two phone rows (gdv 1 + St-Nicolas 2; grande tresse 3). Email: 3 commandes (1 site, 2 téléphone), St-Nicolas 6, gdv 1, grande tresse 3. Jill confirmed. Notion swapped back afterwards.
+  - Seen while building: Make reports **🔥 2 Fournée ready as inactive and invalid** (it was recorded as active). Check before step 7.
 
 ## Test approach
 
