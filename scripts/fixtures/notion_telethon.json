@@ -1,0 +1,186 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "page",
+      "id": "41762276-53ba-817d-9798-ee27210d4892",
+      "properties": {
+        "Announcement": {
+          "id": "vGfV",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "Fournée spéciale Téléthon 2026 au four de la cure à Bottens. Pizza du four dès 19h30 pour 10.- (salle chauffée, buvette, boissons chaudes).",
+              "text": {
+                "content": "Fournée spéciale Téléthon 2026 au four de la cure à Bottens. Pizza du four dès 19h30 pour 10.- (salle chauffée, buvette, boissons chaudes).",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        },
+        "Collection date": {
+          "date": {
+            "end": "2026-12-04T21:30:00.000+01:00",
+            "start": "2026-12-04T19:00:00.000+01:00",
+            "time_zone": null
+          },
+          "id": "ZaTW",
+          "type": "date"
+        },
+        "Name": {
+          "id": "title",
+          "title": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "Fournée du 4 décembre 2026",
+              "text": {
+                "content": "Fournée du 4 décembre 2026",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "title"
+        },
+        "Order deadline": {
+          "date": {
+            "end": null,
+            "start": "2026-11-27",
+            "time_zone": null
+          },
+          "id": "JVr~",
+          "type": "date"
+        },
+        "Preparation status": {
+          "id": "YhQk",
+          "select": {
+            "color": "green",
+            "id": "<|PU",
+            "name": "Ready"
+          },
+          "type": "select"
+        },
+        "Public site copy": {
+          "id": "WhFY",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "Fournée spéciale Téléthon 2026 au four de la cure à Bottens, avec les Boulangers sympa et la Jeunesse de Bottens.\n\nRetrait des commandes vendredi 4 décembre, de 19h à 21h30, au four. Dernier délai pour commander : vendredi 27 novembre.\n\nÀ commander : pain Gros-de-Vaud CHF 4.50, grande tresse CHF 6, petite tresse CHF 3 et St-Nicolas CHF 4. Maximum 4 pièces par produit et par commande.\n\nCommandez en ligne, par téléphone au 021 881 21 87 ou par SMS au 079 668 36 19.\n\nVendredi 4 décembre de 19h30 à 21h30, venez déguster une pizza du four pour CHF 10, plus à votre bon cœur. Salle chauffée, buvette et boissons chaudes sur place.\n\nMerci d’avance pour votre présence et votre soutien !",
+              "text": {
+                "content": "Fournée spéciale Téléthon 2026 au four de la cure à Bottens, avec les Boulangers sympa et la Jeunesse de Bottens.\n\nRetrait des commandes vendredi 4 décembre, de 19h à 21h30, au four. Dernier délai pour commander : vendredi 27 novembre.\n\nÀ commander : pain Gros-de-Vaud CHF 4.50, grande tresse CHF 6, petite tresse CHF 3 et St-Nicolas CHF 4. Maximum 4 pièces par produit et par commande.\n\nCommandez en ligne, par téléphone au 021 881 21 87 ou par SMS au 079 668 36 19.\n\nVendredi 4 décembre de 19h30 à 21h30, venez déguster une pizza du four pour CHF 10, plus à votre bon cœur. Salle chauffée, buvette et boissons chaudes sur place.\n\nMerci d’avance pour votre présence et votre soutien !",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        },
+        "Run ID": {
+          "id": "%5Dd%3A%40",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "2026-12-04",
+              "text": {
+                "content": "2026-12-04",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        },
+        "Status": {
+          "id": "%5CDQe",
+          "status": {
+            "color": "yellow",
+            "id": "v`;_",
+            "name": "Current"
+          },
+          "type": "status"
+        },
+        "date_fournée": {
+          "id": "kbA%5D",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "vendredi 4 décembre 2026",
+              "text": {
+                "content": "vendredi 4 décembre 2026",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        },
+        "heure_fournée": {
+          "id": "o%3FgU",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "de 19h à 21h30",
+              "text": {
+                "content": "de 19h à 21h30",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        }
+      }
+    }
+  ],
+  "has_more": false
+}

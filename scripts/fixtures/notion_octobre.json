@@ -1,0 +1,186 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "page",
+      "id": "3dd62276-53ba-814b-a172-feeb314753d0",
+      "properties": {
+        "Announcement": {
+          "id": "vGfV",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "Fournée d'automne au four à pain de la cure de Bottens. Retrait samedi 10 octobre 2026 de 8h à 11h. Délai de commande: samedi 3 octobre 2026.",
+              "text": {
+                "content": "Fournée d'automne au four à pain de la cure de Bottens. Retrait samedi 10 octobre 2026 de 8h à 11h. Délai de commande: samedi 3 octobre 2026.",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        },
+        "Collection date": {
+          "date": {
+            "end": "2026-10-10T11:00:00.000+02:00",
+            "start": "2026-10-10T08:00:00.000+02:00",
+            "time_zone": null
+          },
+          "id": "ZaTW",
+          "type": "date"
+        },
+        "Name": {
+          "id": "title",
+          "title": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "Fournée du 10 octobre 2026",
+              "text": {
+                "content": "Fournée du 10 octobre 2026",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "title"
+        },
+        "Order deadline": {
+          "date": {
+            "end": null,
+            "start": "2026-10-03",
+            "time_zone": null
+          },
+          "id": "JVr~",
+          "type": "date"
+        },
+        "Preparation status": {
+          "id": "YhQk",
+          "select": {
+            "color": "green",
+            "id": "<|PU",
+            "name": "Ready"
+          },
+          "type": "select"
+        },
+        "Public site copy": {
+          "id": "WhFY",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "Fournée d’automne — samedi 10 octobre 2026\n\nRetrait des commandes de 8h à 11h au four à pain de la cure de Bottens.\n\nDélai de commande : samedi 3 octobre 2026.\n\nAucune vente ne sera possible sans réservation préalable. Les possibilités du four sont limitées.",
+              "text": {
+                "content": "Fournée d’automne — samedi 10 octobre 2026\n\nRetrait des commandes de 8h à 11h au four à pain de la cure de Bottens.\n\nDélai de commande : samedi 3 octobre 2026.\n\nAucune vente ne sera possible sans réservation préalable. Les possibilités du four sont limitées.",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        },
+        "Run ID": {
+          "id": "%5Dd%3A%40",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "2026-10-10",
+              "text": {
+                "content": "2026-10-10",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        },
+        "Status": {
+          "id": "%5CDQe",
+          "status": {
+            "color": "blue",
+            "id": ";eb@",
+            "name": "Complete"
+          },
+          "type": "status"
+        },
+        "date_fournée": {
+          "id": "kbA%5D",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "samedi 10 octobre 2026",
+              "text": {
+                "content": "samedi 10 octobre 2026",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        },
+        "heure_fournée": {
+          "id": "o%3FgU",
+          "rich_text": [
+            {
+              "annotations": {
+                "bold": false,
+                "code": false,
+                "color": "default",
+                "italic": false,
+                "strikethrough": false,
+                "underline": false
+              },
+              "href": null,
+              "plain_text": "de 8h à 11h",
+              "text": {
+                "content": "de 8h à 11h",
+                "link": null
+              },
+              "type": "text"
+            }
+          ],
+          "type": "rich_text"
+        }
+      }
+    }
+  ],
+  "has_more": false
+}

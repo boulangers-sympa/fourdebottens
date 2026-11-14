@@ -11,4 +11,7 @@
 #  _data/fournees/, sans « .yml ».
 # ============================================================
 
+# Mise en route en cours : la synchronisation depuis Notion ne change rien
+# tant que cette ligne est là.
+manuel: oui
 actuelle: telethon
