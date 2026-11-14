@@ -1,3 +1,6 @@
 _site/
 .jekyll-cache/
 .DS_Store
+
+# Make scenario backups (contain email addresses) — never commit
+*.blueprint.json

@@ -1,4 +1,4 @@
-# Handoff: fournée workflow, continue at step 5
+# Handoff: fournée workflow, finish step 5 tests, then step 6
 
 Repo: `~/Developer/boulangers-sympa` (GitHub `boulangers-sympa/fourdebottens`, branch `main`, Pages site www.fourdebottens.ch).
 
@@ -28,14 +28,15 @@ Repo: `~/Developer/boulangers-sympa` (GitHub `boulangers-sympa/fourdebottens`, b
   - Daily summary email to Michel.
   - The daily GitHub schedule is only a backup.
 
-## Next: step 5, 🔥 3 Orders (total check + row writer)
+## Next: finish step 5 tests (at step 7), then step 6 🔥 4 Daily summary
 
-Step 4 is done and tested (see plan → Progress, 14 Nov). 🔥 2 Fournée ready is active; the Notion automation sends its webhook when Preparation status becomes Ready.
+Steps 4 and most of 5 are done (plan → Progress, 14 Nov). 🔥 3 now writes each Tally order into Michel's Sheet by header name and checks the total.
 
-- Test on the Notion page « TEST 🔥 2 – à supprimer » and its Sheet `TEST-2026-12-04 – Commandes` (in Michel's folder). Delete both after step 6.
-- 🔥 3 is ~5 modules and small enough to update through the Make API, but it is **live** (Tally orders): Jill should save a copy first, or do it in the UI.
-- Fix found today for step 8: the Notion custom agent **Fournée Finaliser** writes Public site copy and the confirmation texts at *Needs review*. Keep it; edit its instructions (no dates in site copy).
-- Watch out: the Make API replaces whole blueprints. 🔥 1 (~200 KB) is edited by Jill in the UI. At step 7 the Téléthon's `Orders sheet` URL moves out so 🔥 2 creates Michel's Sheet.
+- Testing 🔥 3 by replay sends a confirmation email BCC Michel: remove the BCC first and restore it after, or don't replay.
+- To test with the TEST fournée, make it Current and the Téléthon Planning, then swap back. Never leave two Current.
+- Still to test: price-mismatch alert and column reorder (in the step 7 test order).
+- Fournée Finaliser (Notion agent) writes site copy + confirmation texts at Needs review; fix its instructions at step 8.
+- Make API replaces whole blueprints; 🔥 1 (~200 KB) is edited by Jill in the UI.
 
 Then steps 5–8 as in the plan. Step 8 = rewrite the Notion Skill « Prepare Boulangers fournée » as the single runbook (Runs in = Both), add a Memories pointer and rows in the Automations database (`collection://25c0e878-1c49-40b0-a78b-e32b7ed1498f`), and put the "only half tested" warning at the top.
 
