@@ -13,3 +13,7 @@ exclude:
   - scripts/
   - docs/
   - README.md
+  - CLAUDE.md
+  - CONTEXT.md
+  - HANDOFF.md
+  - NOTES.md
