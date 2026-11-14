@@ -1,0 +1,13 @@
+{%- comment -%}
+  Lit _data/fournee.yml et prépare deux variables :
+  - f        : la fournée choisie (fichier de _data/fournees/)
+  - ouverte  : true si une fournée est en cours (commandes ouvertes)
+  Un nom inconnu (faute de frappe) se comporte comme « aucune ».
+{%- endcomment -%}
+{%- assign nom_fournee = site.data.fournee.actuelle | default: "aucune" | strip | downcase -%}
+{%- assign f = site.data.fournees[nom_fournee] -%}
+{%- assign ouverte = true -%}
+{%- if nom_fournee == "aucune" or f == nil -%}
+  {%- assign f = site.data.fournees.aucune -%}
+  {%- assign ouverte = false -%}
+{%- endif -%}

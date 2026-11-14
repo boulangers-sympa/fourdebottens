@@ -3,18 +3,50 @@
 Site statique (Jekyll), publié par GitHub Pages à chaque modification
 (voir l'onglet **Actions** sur github.com pour suivre la mise en ligne).
 
-## Préparer une nouvelle fournée
+## Choisir ce que montre la page d'accueil
+
+Tout se règle dans **une seule ligne** de `_data/fournee.yml` :
+
+| Ligne | Page d'accueil | « Commandes » |
+|---|---|---|
+| `actuelle: telethon` | la fournée du Téléthon | visible, formulaire ouvert |
+| `actuelle: aucune` | page d'entre-deux | caché, formulaire fermé |
+
+Le mot après `actuelle:` est le nom d'un fichier du dossier
+`_data/fournees/`, sans `.yml`. Un nom mal écrit affiche la page
+d'entre-deux (le site ne casse pas).
+
+Pour changer :
 
 1. Ouvrir `_data/fournee.yml` sur github.com
 2. Cliquer sur le crayon ✏️ (Edit)
-3. Changer le titre, la date, les cartes et le texte
+3. Remplacer le mot après `actuelle:`
 4. Cliquer sur **Commit changes**
 
 Le site se met à jour 1 à 2 minutes plus tard.
 
-### Modifier le texte sous le bouton « Je commande »
+## Préparer la fournée du Téléthon (chaque année)
 
-C'est la partie `texte:` à la fin de `_data/fournee.yml` :
+1. Ouvrir `_data/fournees/telethon.yml` sur github.com
+2. Cliquer sur le crayon ✏️ (Edit)
+3. Changer la date, les cartes (dernier délai, retrait, prix) et le texte
+4. Cliquer sur **Commit changes**
+5. Dans `_data/fournee.yml`, mettre `actuelle: telethon`
+
+Après la fournée, remettre `actuelle: aucune`.
+
+## Ajouter un autre type de fournée
+
+Copier `_data/fournees/telethon.yml` sous un nouveau nom, par exemple
+`_data/fournees/printemps.yml` (minuscules, sans accents ni espaces),
+le modifier, puis mettre `actuelle: printemps`.
+
+## Modifier le texte d'entre-deux
+
+C'est le fichier `_data/fournees/aucune.yml` : un titre, un sous-titre
+et le texte.
+
+### Règles pour les textes (`texte:`)
 
 ```yaml
 texte: |
@@ -27,6 +59,7 @@ texte: |
 - Commencer chaque ligne par **2 espaces**.
 - Laisser une **ligne vide** entre deux paragraphes.
 - Pour mettre un mot en gras : `**pizza du four**`.
+- Pour un lien : `[histoire du four](/histoire/)`.
 
 Si le site ne se met pas à jour, ouvrir l'onglet **Actions** : une croix
 rouge ❌ signale en général un espace manquant au début d'une ligne.

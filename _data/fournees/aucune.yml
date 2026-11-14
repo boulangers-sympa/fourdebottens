@@ -1,0 +1,16 @@
+# ============================================================
+#  ENTRE DEUX FOURNÉES
+#  Page d'accueil affichée quand _data/fournee.yml dit « actuelle: aucune ».
+#  Le menu « Commandes » est alors caché.
+# ============================================================
+
+titre: Le four de la cure à Bottens
+sous_titre: La prochaine fournée sera annoncée ici
+
+# Texte sous le titre. Laissez une ligne vide entre deux paragraphes.
+texte: |
+  Les Boulangers Sympa font vivre le four à bois de la cure de Bottens : pains, tresses, amandines, Saint-Nicolas et pizzas cuits au feu de bois, plusieurs fois par année.
+
+  Dès qu’une fournée est prévue, vous pourrez commander ici.
+
+  En attendant, découvrez l’[histoire du four](/histoire/) et les [photos des dernières fournées](/galerie/).

@@ -15,11 +15,13 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
+  {% include fournee-actuelle.html %}
   <nav class="nav">
     <a class="nav-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <ul class="nav-links">
       {% assign liens = "Home|/,Commandes|/commandes/,Histoire|/histoire/,Galerie|/galerie/,Contact|/contact/" | split: "," %}
       {% for l in liens %}{% assign p = l | split: "|" %}
+      {% if p[1] == "/commandes/" and ouverte == false %}{% continue %}{% endif %}
       <li><a href="{{ p[1] | relative_url }}"{% if page.url == p[1] %} aria-current="page"{% endif %}>{{ p[0] }}</a></li>
       {% endfor %}
     </ul>

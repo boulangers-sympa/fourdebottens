@@ -1,34 +1,14 @@
 # ============================================================
-#  PROCHAINE FOURNÉE
-#  Modifiez ce fichier pour chaque nouvelle fournée.
-#  Le site se met à jour tout seul 1 à 2 minutes après l'enregistrement.
+#  QUELLE FOURNÉE AFFICHER ?
+#  Une seule ligne à changer. Le site se met à jour 1 à 2 minutes après.
+#
+#  actuelle: telethon  → la fournée du fichier _data/fournees/telethon.yml
+#                        (page d'accueil, menu « Commandes » et formulaire)
+#  actuelle: aucune    → page d'accueil d'entre-deux (texte dans
+#                        _data/fournees/aucune.yml), sans « Commandes »
+#
+#  Le mot après « actuelle: » est le nom d'un fichier du dossier
+#  _data/fournees/, sans « .yml ».
 # ============================================================
 
-# oui = afficher la fournée sur la page d'accueil, non = message « pas de fournée prévue »
-afficher: oui
-
-titre: Fournée spéciale Téléthon
-date: vendredi 4 décembre 2026
-
-# Les trois cartes. Pour aller à la ligne dans une valeur, utilisez « | » et
-# écrivez chaque ligne en dessous (voir la deuxième carte).
-cartes:
-  - libelle: Dernier délai pour commander
-    valeur: vendredi 27 novembre
-    rouge: oui
-  - libelle: Retrait des commandes, au four
-    valeur: |
-      vendredi 4 décembre
-      19h–21h30
-  - libelle: Pizza du four, dès 19h30
-    valeur: CHF 10
-
-# Texte sous le bouton. Laissez une ligne vide entre deux paragraphes.
-texte: |
-  Fournée spéciale au four de la cure à Bottens, avec les Boulangers Sympa et la Jeunesse de Bottens.
-
-  Vendredi 4 décembre de 19h30 à 21h30, venez déguster une pizza du four pour CHF 10, plus à votre bon cœur.
-
-  Salle chauffée, buvette et boissons chaudes sur place.
-
-  Merci d’avance pour votre présence et votre soutien !
+actuelle: telethon

@@ -1,0 +1,31 @@
+# ============================================================
+#  FOURNÉE TÉLÉTHON (gardée d'une année à l'autre)
+#  Chaque année : changer les dates et le texte, puis mettre
+#  « actuelle: telethon » dans _data/fournee.yml.
+# ============================================================
+
+titre: Fournée spéciale Téléthon
+date: vendredi 4 décembre 2026
+
+# Les trois cartes. Pour aller à la ligne dans une valeur, utilisez « | » et
+# écrivez chaque ligne en dessous (voir la deuxième carte).
+cartes:
+  - libelle: Dernier délai pour commander
+    valeur: vendredi 27 novembre
+    rouge: oui
+  - libelle: Retrait des commandes, au four
+    valeur: |
+      vendredi 4 décembre
+      19h–21h30
+  - libelle: Pizza du four, dès 19h30
+    valeur: CHF 10
+
+# Texte sous le bouton. Laissez une ligne vide entre deux paragraphes.
+texte: |
+  Fournée spéciale au four de la cure à Bottens, avec les Boulangers Sympa et la Jeunesse de Bottens.
+
+  Vendredi 4 décembre de 19h30 à 21h30, venez déguster une pizza du four pour CHF 10, plus à votre bon cœur.
+
+  Salle chauffée, buvette et boissons chaudes sur place.
+
+  Merci d’avance pour votre présence et votre soutien !
