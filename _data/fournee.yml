@@ -1,14 +1,15 @@
 # ============================================================
 #  QUELLE FOURNÉE AFFICHER ?
-#  Une seule ligne à changer. Le site se met à jour 1 à 2 minutes après.
+#  Ce fichier est mis à jour automatiquement depuis Notion
+#  (la fournée « Current » dont la préparation est « Ready »).
+#  Après la date de retrait, il revient à « aucune ».
 #
+#  Pour reprendre la main à la main, ajouter la ligne
+#      manuel: oui
+#  puis choisir « actuelle: » soi-même :
 #  actuelle: telethon  → la fournée du fichier _data/fournees/telethon.yml
-#                        (page d'accueil, menu « Commandes » et formulaire)
-#  actuelle: aucune    → page d'accueil d'entre-deux (texte dans
-#                        _data/fournees/aucune.yml), sans « Commandes »
-#
-#  Le mot après « actuelle: » est le nom d'un fichier du dossier
-#  _data/fournees/, sans « .yml ».
+#  actuelle: aucune    → page d'accueil d'entre-deux
+#                        (texte dans _data/fournees/aucune.yml)
 # ============================================================
 
-actuelle: telethon
+actuelle: "2026-12-04"

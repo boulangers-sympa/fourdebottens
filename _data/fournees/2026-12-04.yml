@@ -1,0 +1,27 @@
+# ============================================================
+#  Fichier écrit automatiquement depuis Notion : ne pas le modifier ici,
+#  il serait remplacé. Modifier la fournée dans Notion.
+# ============================================================
+
+titre: "Fournée spéciale Téléthon"
+date: "vendredi 4 décembre 2026"
+
+cartes:
+  - libelle: "Dernier délai pour commander"
+    valeur: "vendredi 27 novembre"
+    rouge: oui
+  - libelle: "Retrait des commandes, au four"
+    valeur: |
+      vendredi 4 décembre
+      19h–21h30
+  - libelle: "Pizza du four, dès 19h30"
+    valeur: "CHF 10"
+
+texte: |
+  Fournée spéciale au four de la cure à Bottens, avec les Boulangers Sympa et la Jeunesse de Bottens.
+
+  Vendredi 4 décembre de 19h30 à 21h30, venez déguster une pizza du four pour CHF 10, plus à votre bon cœur.
+
+  Salle chauffée, buvette et boissons chaudes sur place.
+
+  Merci d’avance pour votre présence et votre soutien !
