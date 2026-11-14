@@ -115,6 +115,14 @@ h1, h2, h3, .carte-valeur, .nav-brand {
   flex-direction: column;
   gap: 8px;
 }
+.plan {
+  display: block;
+  width: 100%;
+  height: 420px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 12px;
+}
 .carte-libelle { font-size: 18px; color: var(--muted); }
 .carte-valeur { font-size: clamp(24px, 3vw, 28px); line-height: 1.25; }
 .carte-valeur.rouge { color: var(--accent); }
