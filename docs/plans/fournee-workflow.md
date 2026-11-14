@@ -169,7 +169,7 @@ Each step ends in something checkable. All steps run now, in order, on the Tél�
 
 - 14 Nov 2026: step 0 done (Jill). Step 1 done: `scripts/sync_fournee.py` + 18 unit tests pass; a local Jekyll build with the generated Téléthon files shows the right title, dates, cards and text. `actuelle:` is written quoted (`"2026-12-04"`) so YAML keeps it as text, not a date.
 - 14 Nov 2026: step 2 done. Notion Fournées has **Titre fournée** and **Cartes site**; the Téléthon has `Fournée spéciale Téléthon` and `Pizza du four, dès 19h30 | CHF 10`. Dry run against live Notion: title, date and all three cards match `telethon.yml`; only the body text differs (Notion `Public site copy` is longer and repeats the cards). Jill chose to copy the site text into Notion; regenerated output is now identical to `telethon.yml` (quotes aside).
-- 14 Nov 2026: step 3 written: `.github/workflows/fournee.yml` (dispatch + manual + daily 04:17 UTC) and `manuel: oui` in `_data/fournee.yml`; sync is a no-op with the override, site still builds with the Téléthon page. Waiting for: `NOTION_TOKEN` secret, commit + push, one manual run (expect green, « Rien à changer »).
+- 14 Nov 2026: step 3 done. Workflow pushed (a7cdb4e) with `manuel: oui`. `NOTION_TOKEN` = internal connection « Four de Bottens » (read-only, Fournées + Fournée products). Manual run with « Vérifier seulement » read the Téléthon from Notion on GitHub (green); a normal run said « rien n'est changé » (green); « Publier le site » green. `--verifier` / the « Vérifier seulement » tick box checks Notion without writing, even with `manuel: oui`.
 
 ## Test approach
 
