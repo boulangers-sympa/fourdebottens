@@ -186,6 +186,15 @@ Each step ends in something checkable. All steps run now, in order, on the Tél�
   - Email recipient is **fourdebottens@gmail.com** for now: a privacy plugin stops Claude from writing Jill's address into Make. At step 7 Jill sets To = Michel and adds herself as BCC in the Make UI.
   - Tested with the TEST fournée temporarily Current: TEST Sheet with the Tally row (St-Nicolas 4) and two phone rows (gdv 1 + St-Nicolas 2; grande tresse 3). Email: 3 commandes (1 site, 2 téléphone), St-Nicolas 6, gdv 1, grande tresse 3. Jill confirmed. Notion swapped back afterwards.
   - Seen while building: Make reports **🔥 2 Fournée ready as inactive and invalid** (it was recorded as active). Check before step 7.
+- 14 Nov 2026: **step 7 done. The Téléthon is live on the new workflow.**
+  - 🔥 2 had been switched off and marked invalid by Make after its 17:37 GitHub 401. The key was fixed by 17:47, but `scenarios_activate` cannot clear the invalid flag: Jill had to **Save in the editor**, then switch it on. Applies to any scenario Make switches off after an error.
+  - 🔥 1: module 14 removed. Module 7 (Notion « Create a Data Source Item ») used to fill `Orders sheet` from it; that field is now empty. **Orders sheet must stay empty on a new fournée**, or 🔥 2 skips it.
+  - **The Fournée products relation allows one fournée per product.** Linking the four Téléthon products to the TEST page at step 4 had moved them off the Téléthon, so 🔥 2's first run made a Sheet with no product columns. Products were relinked and 🔥 2 rerun: `2026-12-04 – Commandes` has 12 headers. To test with a copy fournée, make **copies** of the product rows, never relink them.
+  - Old Tally Sheet URL moved to the Téléthon's Notes (« Permanent Sheet »). Preparation status changed empty → Ready, never via *Needs review* (that starts the Fournée Finaliser).
+  - `manuel: oui` removed; the sync wrote `_data/fournees/2026-12-04.yml`, identical to `telethon.yml`; site published and checked (title, three cards including the pizza card, text).
+  - Test order 1 (1/2/3/4, CHF 41.50) and order 2 (after moving Grande tresse to the right of St-Nicolas: St-Nicolas 1, Grande tresse 2) both landed in the right columns; emails right; Michel got BCC copies. **Price-mismatch alert not tested**: Jill decided it isn't worth it (prices rarely change).
+  - Test rows deleted (Michel's Sheet, Tally), TEST page and TEST Sheet removed. 🔥 4 To = Michel + Jill, **active** from 15 Nov 07:00. With no orders it probably sends nothing (empty sheet → no bundles); unverified.
+  - The Tally embed on /commandes stayed blank in Claude's in-app browser; the form itself loads on tally.so. Not checked in a normal browser by Claude: Jill to confirm the form shows on the site.
 
 ## Test approach
 
