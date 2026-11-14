@@ -194,7 +194,14 @@ Each step ends in something checkable. All steps run now, in order, on the Tél�
   - `manuel: oui` removed; the sync wrote `_data/fournees/2026-12-04.yml`, identical to `telethon.yml`; site published and checked (title, three cards including the pizza card, text).
   - Test order 1 (1/2/3/4, CHF 41.50) and order 2 (after moving Grande tresse to the right of St-Nicolas: St-Nicolas 1, Grande tresse 2) both landed in the right columns; emails right; Michel got BCC copies. **Price-mismatch alert not tested**: Jill decided it isn't worth it (prices rarely change).
   - Test rows deleted (Michel's Sheet, Tally), TEST page and TEST Sheet removed. 🔥 4 To = Michel + Jill, **active** from 15 Nov 07:00. With no orders it probably sends nothing (empty sheet → no bundles); unverified.
-  - The Tally embed on /commandes stayed blank in Claude's in-app browser; the form itself loads on tally.so. Not checked in a normal browser by Claude: Jill to confirm the form shows on the site.
+  - The Tally embed on /commandes stayed blank in Claude's in-app browser; the form itself loads on tally.so. Jill confirmed the form shows on the site in a normal browser.
+- 14–15 Nov 2026 (evening): **total row in Michel's Sheet, 🔥 2 hardened.**
+  - **Row 2 of Michel's Sheet is a TOTAL row**: `TOTAL` in Nom, and `=SUM(INDEX(A3:Z,0,COLUMN()))` under each product (same formula in every cell: it sums its own column from row 3 down, and moves with the column). Rows 1–2 frozen and bold. Orders start at row 3; 🔥 3's Add a row still appends at the bottom.
+  - 🔥 4 « Read order rows » now reads **A3:Z1000** (otherwise it would count the total row as a phone order and double every total). Jill changed it in the UI.
+  - 🔥 2 now writes the total row (modules 10–12: products again → formulas → PUT A2, USER_ENTERED) and freezes and bolds rows 1–2 (module 13, batchUpdate, sheetId 0). **Not tested yet**: first run on the next fournée. Check the new Sheet has the TOTAL row.
+  - The Téléthon Sheet got its total row by hand (product columns only; the Total CHF column K2 is empty).
+  - **🔥 2 was switched off again** at 20:03 on 14 Nov: its webhook received an **empty call** (`{}`, no Notion page), module 2 asked Notion for `/v1/pages/` and got 400; with *sequential* on, Make stops the scenario. An earlier empty call caused the 18:53 failure. **Source found**: Make's webhook log shows a GET from Jill's own home IP with the Apple link-preview user agent (`… Safari/601.2.4 facebookexternalhit/1.1 Facebot Twitterbot/1.0`): the webhook URL had been pasted into an app that builds link previews (Messages, Notes, Mail…). Harmless, but don't paste webhook URLs into such apps. Fix: a filter « Has a Notion page » on module 2, so empty calls stop quietly. Jill saved 🔥 2 in the editor and switched it on.
+  - Phone orders are counted by 🔥 4 (it reads the Sheet, not Tally): Source « tally » = site, anything else = phone. Product cells must hold a number only (« 2 pains » counts as 0). Only columns A–P are read.
 
 ## Test approach
 

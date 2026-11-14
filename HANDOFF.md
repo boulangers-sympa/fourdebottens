@@ -8,19 +8,19 @@ Repo: `~/Developer/boulangers-sympa` (GitHub `boulangers-sympa/fourdebottens`, b
 - **Terms:** `CONTEXT.md`. **Repo pointer:** `CLAUDE.md`.
 - **Jill's Notion rules:** Agent Operating Guide (Notion page `3fd6227653ba81c196cdf01d2ee663a6`). Notion CLI with her personal login: prefix `NOTION_HOME=~/.config/ntn-personal NOTION_KEYRING=0`. `ntn api` sometimes hangs: wrap it as `perl -e 'alarm 60; exec @ARGV' ntn api …`. The Notion MCP connector works for reads, property updates and trashing pages.
 
-## Where things stand (14 Nov 2026, 20:30)
+## Where things stand (15 Nov 2026, 00:15)
 
 - **The Téléthon fournée is live on the new workflow** (Run ID `2026-12-04`, Notion page `41762276-53ba-817d-9798-ee27210d4892`, Current, Ready). Orders close **27 Nov**. Jill sends the order link herself.
 - Home page follows Notion (`manuel: oui` removed); `_data/fournees/2026-12-04.yml` is generated.
-- Michel's Sheet: `2026-12-04 – Commandes` (`1rR_ZHQh2zFR1ockE7ip3ed_OKwPQMJbbN6AhO3NXFMs`), header row only. Old Tally Sheet URL is in the fournée's Notes.
+- Michel's Sheet: `2026-12-04 – Commandes` (`1rR_ZHQh2zFR1ockE7ip3ed_OKwPQMJbbN6AhO3NXFMs`): header row, then a **TOTAL row (row 2)**, rows 1–2 frozen; orders start at row 3. 🔥 4 reads from row 3; 🔥 2 now builds the total row for each new Sheet (untested until the next fournée). Old Tally Sheet URL is in the fournée's Notes.
 - Make: 🔥 1 (module 14 removed), 🔥 2 (8577362), 🔥 3 Orders (1916845), 🔥 4 Daily summary (8578340, active from 15 Nov 07:00, To = Michel + Jill) all **active**.
 - Test fixtures are gone (TEST Notion page, TEST Sheet, test rows).
 
 ## Check first next session
 
 - Did 🔥 4 send anything at 07:00 on 15 Nov? With no orders it probably sends nothing; the first summary comes the morning after the first real order. Check its first real email against the Sheet.
-- Jill to confirm the Tally form shows on /commandes in a normal browser (it was blank in Claude's in-app browser).
-- **Not tested:** the price-mismatch alert (Jill's call) and 🔥 4's day-after GitHub route (fires 5 Dec).
+- Jill's message to Michel (Sheet, phone orders at the bottom, numbers only, don't rename headings, TOTAL row, 07:00 email): drafted 14 Nov; check it went.
+- **Not tested:** 🔥 2's new total-row modules (next fournée), the price-mismatch alert (Jill's call) and 🔥 4's day-after GitHub route (fires 5 Dec).
 
 ## Next: step 8, the runbook
 
@@ -35,6 +35,7 @@ Also edit the **Fournée Finaliser** Notion agent's instructions: site copy with
 
 ## Watch out
 
+- **Don't paste Make webhook URLs into Messages, Notes, Mail or chat apps.** Their link preview opens the URL, which sends the scenario an empty call. That is what switched 🔥 2 off on 14 Nov; 🔥 2 now ignores such calls, 🔥 3's Tally webhook does not.
 - **Replaying 🔥 3 emails Michel** (BCC). Remove his BCC first, restore straight after.
 - **Never leave two fournées Current.**
 - **Make API can't show module outputs** on Jill's plan; read results in the inbox (Gmail connector works), the Sheet (Drive connector) or Make's History.
