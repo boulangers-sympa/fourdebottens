@@ -53,7 +53,7 @@ Then:
 
 ## Logging
 
-At the end of each session, update the day's Four de Bottens entry in the Agent Log (data source `ab4180b9-af2e-4ddf-ba45-6b164373faab`; 14 Nov entry is `41862276-53ba-8196-842d-ff634e0c27dd`). On a new day, create a new entry.
+At the end of each session, update the day's Four de Bottens entry in the Agent Log. Start each appended update with the local time (`HH:MM —`) (data source `ab4180b9-af2e-4ddf-ba45-6b164373faab`; 14 Nov entry is `41862276-53ba-8196-842d-ff634e0c27dd`). On a new day, create a new entry.
 
 ## Suggested skills
 
