@@ -33,6 +33,13 @@ Rewrite the Notion Skill « Prepare Boulangers fournée » as the single runbook
 
 Also edit the **Fournée Finaliser** Notion agent's instructions: site copy without dates, and **fill a field only if it is empty**, otherwise leave it (Jill, 14 Nov). Add three lines for Michel: phone orders at the bottom, no empty rows, don't rename column headings.
 
+## Totaux fournée page (15 Nov 2026, side session)
+
+- Private live totals page for Jill and Michel: Google Apps Script web app, code in `scripts/totaux-fournee/` (README explains setup, update and how to cut access). Details in the plan's Progress (15 Nov).
+- URL: Jill has it (not in the repo, keep it out). Notion token in the script's Script properties; product names come from the Sheet headings.
+- **Check:** after the first real orders, the page's numbers match the Sheet's TOTAL row (the page warns if not).
+- Works for any next fournée without changes, as long as Michel's Sheet keeps the tab name `Sheet1` and orders from row 3.
+
 ## Watch out
 
 - **Don't paste Make webhook URLs into Messages, Notes, Mail or chat apps.** Their link preview opens the URL, which sends the scenario an empty call. That is what switched 🔥 2 off on 14 Nov; 🔥 2 now ignores such calls, 🔥 3's Tally webhook does not.

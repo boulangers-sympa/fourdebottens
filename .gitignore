@@ -4,3 +4,6 @@ _site/
 
 # Make scenario backups (contain email addresses) — never commit
 *.blueprint.json
+
+# Apps Script project pointer (totaux fournée)
+scripts/totaux-fournee/.clasp.json
