@@ -1,4 +1,4 @@
-# Handoff: fournée workflow, continue at step 8
+# Handoff: fournée workflow, steps 0–8 done
 
 Repo: `~/Developer/boulangers-sympa` (GitHub `boulangers-sympa/fourdebottens`, branch `main`, Pages site www.fourdebottens.ch).
 
@@ -22,16 +22,13 @@ Repo: `~/Developer/boulangers-sympa` (GitHub `boulangers-sympa/fourdebottens`, b
 - Jill's message to Michel (Sheet, phone orders at the bottom, numbers only, don't rename headings, TOTAL row, 07:00 email): drafted 14 Nov; check it went.
 - **Not tested:** 🔥 2's new total-row modules (next fournée), the price-mismatch alert (Jill's call) and 🔥 4's day-after GitHub route (fires 5 Dec).
 
-## Next: step 8, the runbook
+## Step 8 (15 Nov 2026): done
 
-Rewrite the Notion Skill « Prepare Boulangers fournée » as the single runbook (Runs in = Both), Memories pointer, Automations database rows (`collection://25c0e878-1c49-40b0-a78b-e32b7ed1498f`), "only half tested" callout at the top. Full list in the plan's step 8. It must say:
+Details in the plan's Progress (15 Nov). The runbook is the Notion skill « Prepare Boulangers fournée » (Skills database, Runs in = Both). Template body, launch checklist, Fournées description and a Memories entry point to it; six Automations rows. The Fournée Finaliser now fills only empty fields and **never sets Ready** (Jill does).
 
-- On a new fournée, **Orders sheet stays empty** until 🔥 2 fills it.
-- **Never relink products to a test fournée**: a product belongs to one fournée only. Copy the rows instead.
-- Go from Processing to Ready directly; *Needs review* starts the Fournée Finaliser.
-- If Make switches a scenario off after an error: fix it, then **Save in the editor** and switch on (the API can't clear "invalid").
-
-Also edit the **Fournée Finaliser** Notion agent's instructions: site copy without dates, and **fill a field only if it is empty**, otherwise leave it (Jill, 14 Nov). Add three lines for Michel: phone orders at the bottom, no empty rows, don't rename column headings.
+- After any future `notion-upload-skill`, reset `Skill name` to « Prepare Boulangers fournée » (the upload sets it to the slug).
+- Check next session: the Notion→Claude Code skill sync picked the skill up.
+- Nothing left in the plan's steps. What remains is watching the Téléthon run (below) and May 2027.
 
 ## Totaux fournée page (15 Nov 2026, side session)
 

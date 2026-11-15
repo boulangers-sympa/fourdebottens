@@ -208,6 +208,15 @@ Each step ends in something checkable. All steps run now, in order, on the Tél�
   - Notion token: the read-only « Four de Bottens » connection, stored in the script's *Script properties* as `NOTION_TOKEN` (never in the repo). That connection can't read **Bakery products**, so `Email product list` comes back as `01|||4.5` (names missing); hence names from the Sheet.
   - Execute as Jill, access « Anyone » (no Google login). The URL is long and random and is **not in the repo**; Jill keeps it and sends it to Michel herself. Updating the code keeps the same URL (`clasp deploy -i <deployment id>`).
   - Checked live on 15 Nov with no orders yet: title, deadline 27.11.2026, four products from the Sheet, all 0 = TOTAL row. **Still to check:** the first real orders against the TOTAL row.
+- 15 Nov 2026: **step 8 done (runbook).**
+  - Notion skill « Prepare Boulangers fournée » (`debf9abc-38bd-4259-b0be-f9b4c75b22c1`) rewritten as the single runbook and uploaded with `notion-upload-skill`; **Runs in = Both**; change comment posted. Opens with the "only half tested until May 2027" warning. Covers: forward → 🔥 1, one Current, review (À vérifier fields), permanent Tally, Ready → 🔥 2 checks (Sheet, TOTAL row, site), test order, Michel's Sheet rules, daily summary, end of run, troubleshooting (Orders sheet must stay empty, copy products never relink, Save in the editor after Make switches a scenario off, webhook URLs and link previews, replay BCC), don't-rename list.
+  - Upload gotcha: the upload sets the page title / `Skill name` to the frontmatter slug (`prepare-boulangers-fourn-e`). Reset `Skill name` to « Prepare Boulangers fournée » after every upload.
+  - New fournée template body = one line pointing to the skill. Fournée launch checklist: "replaced" callout at the top (kept for history; delete only if Jill wants). Fournées data source description points to the skill; `Public site copy` description updated (home page, no dates).
+  - Memories: « Setting up a new Four de Bottens fournée » (Work, Claude Code) points to the skill.
+  - Automations database: six rows, Active: 🔥 1–4, « Fournée depuis Notion » (GitHub Action), Fournée Finaliser (Notion agent). Each links its scenario/workflow and points to the skill.
+  - README: "La page d'accueil suit Notion" section replaces the hand-editing instructions; `manuel: oui` explained. CLAUDE.md points to the rewritten skill.
+  - Fournée Finaliser instructions changed by Jill (no API for custom-agent instructions): fill only empty fields; Public site copy for the home page, no dates or prices, plain text; footer always has « Retrait de votre commande » and « Paiement sur place en espèces. ». **It no longer sets Ready** (it used to, which would have started 🔥 2 before Jill's review): it leaves *Needs review* and writes « Finaliser : textes écrits, à relire » in Notes.
+  - Runbook choice: go through *Needs review* so the Finaliser writes the empty texts (safe once it fills only empty fields); Processing → Ready directly skips it.
 
 ## Test approach
 

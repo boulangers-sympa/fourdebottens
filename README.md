@@ -3,43 +3,39 @@
 Site statique (Jekyll), publié par GitHub Pages à chaque modification
 (voir l'onglet **Actions** sur github.com pour suivre la mise en ligne).
 
-## Choisir ce que montre la page d'accueil
+## La page d'accueil suit Notion
 
-Tout se règle dans **une seule ligne** de `_data/fournee.yml` :
+La fournée affichée sur la page d'accueil vient de la fournée **Current**
+dans Notion (base **Fournées**). Une action GitHub, « Fournée depuis
+Notion », écrit les fichiers `_data/fournees/<date>.yml` et
+`_data/fournee.yml`, puis publie le site. Elle tourne :
+
+- quand la fournée passe à **Ready** dans Notion ;
+- le lendemain de la fournée (le site repasse à « aucune fournée ») ;
+- chaque matin, par sécurité ;
+- à la main : onglet **Actions** → « Fournée depuis Notion » → **Run workflow**.
+
+Pour changer le titre, les cartes ou le texte : modifier la fournée dans
+Notion (**Titre fournée**, **Cartes site**, **Public site copy**), puis
+lancer **Run workflow** pour ne pas attendre le lendemain.
+
+Mode d'emploi complet d'une nouvelle fournée : le skill Notion
+« Prepare Boulangers fournée ».
+
+### Reprendre la main (`manuel: oui`)
+
+Pour écrire la page d'accueil à la main, ajouter `manuel: oui` dans
+`_data/fournee.yml`. L'action ne change alors plus rien. Ensuite :
 
 | Ligne | Page d'accueil | « Commandes » |
 |---|---|---|
-| `actuelle: telethon` | la fournée du Téléthon | visible, formulaire ouvert |
+| `actuelle: telethon` | le fichier `_data/fournees/telethon.yml` (exemple fait à la main) | visible, formulaire ouvert |
 | `actuelle: aucune` | page d'entre-deux | caché, formulaire fermé |
 
 Le mot après `actuelle:` est le nom d'un fichier du dossier
 `_data/fournees/`, sans `.yml`. Un nom mal écrit affiche la page
-d'entre-deux (le site ne casse pas).
-
-Pour changer :
-
-1. Ouvrir `_data/fournee.yml` sur github.com
-2. Cliquer sur le crayon ✏️ (Edit)
-3. Remplacer le mot après `actuelle:`
-4. Cliquer sur **Commit changes**
-
-Le site se met à jour 1 à 2 minutes plus tard.
-
-## Préparer la fournée du Téléthon (chaque année)
-
-1. Ouvrir `_data/fournees/telethon.yml` sur github.com
-2. Cliquer sur le crayon ✏️ (Edit)
-3. Changer la date, les cartes (dernier délai, retrait, prix) et le texte
-4. Cliquer sur **Commit changes**
-5. Dans `_data/fournee.yml`, mettre `actuelle: telethon`
-
-Après la fournée, remettre `actuelle: aucune`.
-
-## Ajouter un autre type de fournée
-
-Copier `_data/fournees/telethon.yml` sous un nouveau nom, par exemple
-`_data/fournees/printemps.yml` (minuscules, sans accents ni espaces),
-le modifier, puis mettre `actuelle: printemps`.
+d'entre-deux (le site ne casse pas). Retirer `manuel: oui` pour que la
+page suive à nouveau Notion.
 
 ## Modifier le texte d'entre-deux
 
