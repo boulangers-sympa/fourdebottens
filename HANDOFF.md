@@ -28,6 +28,7 @@ Details in the plan's Progress (15 Nov). The runbook is the Notion skill « Prep
 
 - After any future `notion-upload-skill`, reset `Skill name` to « Prepare Boulangers fournée » (the upload sets it to the slug).
 - Check next session: the Notion→Claude Code skill sync picked the skill up.
+- Preparation status flow: Processing → Needs review (🔥 1) → **To check** (Fournée Finaliser, instructions updated by Jill 15 Nov) → Ready (Jill only).
 - Nothing left in the plan's steps. What remains is watching the Téléthon run (below) and May 2027.
 
 ## Totaux fournée page (15 Nov 2026, side session)

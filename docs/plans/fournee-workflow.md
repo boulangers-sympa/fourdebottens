@@ -216,7 +216,8 @@ Each step ends in something checkable. All steps run now, in order, on the Tél�
   - Automations database: six rows, Active: 🔥 1–4, « Fournée depuis Notion » (GitHub Action), Fournée Finaliser (Notion agent). Each links its scenario/workflow and points to the skill.
   - README: "La page d'accueil suit Notion" section replaces the hand-editing instructions; `manuel: oui` explained. CLAUDE.md points to the rewritten skill.
   - Fournée Finaliser instructions changed by Jill (no API for custom-agent instructions): fill only empty fields; Public site copy for the home page, no dates or prices, plain text; footer always has « Retrait de votre commande » and « Paiement sur place en espèces. ». **It no longer sets Ready** (it used to, which would have started 🔥 2 before Jill's review): it leaves *Needs review* and writes « Finaliser : textes écrits, à relire » in Notes.
-  - Runbook choice: go through *Needs review* so the Finaliser writes the empty texts (safe once it fills only empty fields); Processing → Ready directly skips it.
+  - **Preparation status flow** (Jill, 15 Nov): Processing (🔥 1 working) → Needs review (🔥 1 sets it when done; starts the Finaliser) → **To check** (new option, set by the Finaliser when done; problems in Notes) → Ready (Jill only; starts 🔥 2). Checked in the 🔥 1 blueprint: module 5 sets the previous Current fournée to Complete, module 7 creates the new one as Current + Processing, module 17 sets Needs review after the products.
+  - Runbook comments answered (step 2 is a check, step 3 names the page, Totaux fournée link added in Notion only, not in the repo).
 
 ## Test approach
 
