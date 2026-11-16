@@ -38,6 +38,11 @@ Details in the plan's Progress (15 Nov). The runbook is the Notion skill « Prep
 - **Check:** after the first real orders, the page's numbers match the Sheet's TOTAL row (the page warns if not).
 - Works for any next fournée without changes, as long as Michel's Sheet keeps the tab name `Sheet1` and orders from row 3.
 
+## TOTAL row fix (16 Nov 2026)
+
+- Wrong totals after the first orders: the old formula's `A3` moved to `A4` when 🔥 3 inserted the first order at row 3. New formula `=SUM(OFFSET(A1,2,COLUMN()-1,ROWS(A:A)-2))`; 🔥 2 updated (modules 11–12). Details in the plan's Progress (16 Nov).
+- Live Sheet fixed and checked 16 Nov: TOTAL row = Pain 1, Grande tresse 0, Petite tresse 4, St-Nicolas 2, Total 24.5, matching the 3 orders. Still to check: the Totaux fournée page agrees, and the next order (inserted at the bottom) is counted.
+
 ## Watch out
 
 - **Don't paste Make webhook URLs into Messages, Notes, Mail or chat apps.** Their link preview opens the URL, which sends the scenario an empty call. That is what switched 🔥 2 off on 14 Nov; 🔥 2 now ignores such calls, 🔥 3's Tally webhook does not.
